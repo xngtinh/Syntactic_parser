@@ -132,45 +132,6 @@ function render_tree(grammar, input_text, tree_output_id) {
             '</li>';
     }
 
-    // http://en.wikipedia.org/wiki/Chomsky_normal_form
-    // grammar = [
-    //     'S -> Number | Variable | Open Expr_Close | Factor PowOp_Primary | Term MulOp_Factor | Expr AddOp_Term | AddOp Term',
-    //     'Expr -> Number | Variable | Open Expr_Close | Factor PowOp_Primary | Term MulOp_Factor | Expr AddOp_Term | AddOp Term',
-    //     'Term -> Number | Variable | Open Expr_Close | Factor PowOp_Primary | Term MulOp_Factor',
-    //     'Factor -> Number | Variable | Open Expr_Close | Factor PowOp_Primary',
-    //     'Primary -> Number | Variable | Open Expr_Close',
-    //     'Expr_Close -> Expr Close',
-    //     'PowOp_Primary -> PowOp Primary',
-    //     'MulOp_Factor -> MulOp Factor',
-    //     'AddOp_Term -> AddOp Term',
-    //     'AddOp -> + | -',
-    //     'MulOp -> * | /',
-    //     'Open -> (',
-    //     'Close -> )',
-    //     'PowOp -> ^'
-    // ];
-    // var parseTable = parse(grammarToHashMap(grammar), 'Variable ^ Number + Number * Variable'.split(' '));
-    // for (var i in parseTable[0][parseTable.length - 1]) {
-    //     document.body.innerHTML += '<div class="tree" id="displayTree"><ul>' + traverseParseTable(parseTable, 0, parseTable.length - 1, i) + '</ul></div><br/>';
-    // }
-
-    // http://en.wikipedia.org/wiki/CYK_algorithm#Example
-    // grammar = [
-    //     'S -> NP VP',
-    //     'VP -> VP PP',
-    //     'VP -> V NP',
-    //     'VP -> eats',
-    //     'PP -> P NP',
-    //     'NP -> Det N | she',
-    //     'V -> eats',
-    //     'P -> with',
-    //     'N -> fish | fork',
-    //     'Det -> a'
-    // ];
-    // var parseTable = parse(grammarToHashMap(grammar), 'she eats a fish with a fork'.split(' '));
-    // for (var i in parseTable[0][parseTable.length - 1]) {
-    //     document.body.innerHTML += '<div class="tree" id="displayTree"><ul>' + traverseParseTable(parseTable, 0, parseTable.length - 1, i) + '</ul></div><br/>';
-    // }
 
     grammar = grammar.split('\n')
     grammar = grammar.filter(function(n) {
