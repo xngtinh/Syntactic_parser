@@ -1,4 +1,4 @@
-# Những đóa hoa sen theo chân em lấp lánh. 
+# Những đóa hoa sen theo chân em lấp lánh
 S -> NP VP
 NP -> DT NP
 NP -> UN NP
