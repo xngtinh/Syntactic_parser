@@ -1,1 +1,1 @@
-# CKY Algorithm# syntactic_parser
+## Syntactic parser using CKY Algorithm
